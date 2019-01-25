@@ -4,10 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>PHP Challenge: Payment API</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
         <!-- Styles -->
         <style>
@@ -18,6 +21,12 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+            }
+
+            body {
+                background-image: url(images/background.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
             }
 
             .full-height {
@@ -42,6 +51,13 @@
 
             .content {
                 text-align: center;
+                padding-left: 40px;
+                padding-right: 40px;
+                padding-top: 40px;
+                padding-bottom: 20px;
+                background: rgba(243, 243, 243, 0.75);
+                background-color: white;
+                border-radius: 50px;
             }
 
             .title {
@@ -68,12 +84,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}"><i class="fas fa-home"></i> Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i> Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}"><i class="fas fa-user-plus"></i> Register</a>
                         @endif
                     @endauth
                 </div>
@@ -81,17 +97,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <i class="fas fa-credit-card"></i> Payment API
                 </div>
             </div>
         </div>

@@ -1,0 +1,14 @@
+body {
+	background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.upper-link {
+    color: #636b6f;
+    font-size: 13px !important;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}

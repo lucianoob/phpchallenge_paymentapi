@@ -16,3 +16,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(array('prefix' => '/'), function() {
+
+  	Route::get('/', function () {
+      	return response()->json(['message' => 'Payment API', 'status' => 'Connected']);;
+  	});
+
+  	Route::resource('log', 'LogController');
+  	
+  	Route::resource('payment', 'PaymentController');
+  	Route::get('payment/user/{id}', 'PaymentController@index_user')->name('payment.user');
+});
